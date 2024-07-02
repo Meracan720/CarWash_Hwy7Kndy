@@ -6,7 +6,7 @@
  * 		The main Page after logged in
 
  * Author: Gary(Jiaxing) Chen
- * Last update: Nov 15
+ * Last update: June 27, 2024
 
  * Update Log:
  *      Nov 15
@@ -21,9 +21,9 @@
 
 // README
 $author = "Gary Chen";
-$last_update = "September 28, 2023";
-$title = "INFT - Main Page";
-$headings = "INFT 2100 Main Page";
+$last_update = "June 27, 2024";
+$title = "Carwash - Main Dashboard";
+$headings = "Carwash Main Page";
 $desc = "The sign-in page for the dashboard.";
 
 
@@ -33,35 +33,35 @@ require_once "header.php";
 ?>
 <!-- Above is The header quick script -->  
 
-<h1 class="h2"><br>Welcome to the Dashboard! <br>..</h1>
+<h1 class="h2"><br>Main Dashboard </h1>
 <p><?php echo GetMessage(); ?></p>
 <div class="btn-toolbar mb-2 mb-md-0">
     <div class="btn-group mr-2">
-    <button class="btn btn-sm btn-outline-secondary">Share</button>
-    <button class="btn btn-sm btn-outline-secondary">Export</button>
+        <button class="btn btn-sm btn-outline-secondary">Share</button>
+        <button class="btn btn-sm btn-outline-secondary">Export</button>
     </div>
     <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-    <span data-feather="calendar"></span>
-    This week
+        <span data-feather="calendar">    This week</span>
     </button>
 </div>
 </div>
 
 
 <div>
-<!-- Draw tables -->
+<!-- Draw Summarys -->
 
-<h2>Registered salesman: </h2>
-<p>** Notes: <br>
-The pagination UI does not work but the script is capable to show parts of the table.</p>
-<?php 
+<!-- Show how many bookings-->
+<div>
+<h3>Ongoing Bookings:</h3> <?php echo 'num of appointment today';?>
 
-    // Draw salesman
-    $sales_headings = ['ID',"First Name","Last Name","email address","Now Active?"];
-    $records = Query_to_Database("SELECT id, first_name,last_name,email,active_or_not FROM salespeople");
-    echo Display_Table($sales_headings,$records,10);
-?>
+
 </div>
+<div>
+
+</div>
+
+
+
 
 
 
